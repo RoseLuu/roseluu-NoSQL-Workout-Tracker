@@ -17,7 +17,7 @@
 
 # Description
 
-This is a simple workout tracker app. The app will have two exercise type for user to be choose which is resistance and cardio. After select the exercise type, user can add name, type, weight, sets, reps and duration for resistance type and add name, distance and duration for cardio type. The total workout will be display on the main page and chart also available in dashboard for user to keep track with their daily workout.
+This is a simple workout tracker app. The app will have two exercise type for user to choose which is resistance and cardio. After selecting the exercise type, the user can add name, type, weight, sets, reps, and duration for resistance type and add a name, distance, and duration for cardio type. The total workout will be displayed on the main page and a chart is also available in the dashboard for users to keep track of their daily workout.
 
   <br />
 
