@@ -37,24 +37,24 @@ const WorkoutSchema = new Schema(
         },
       },
     ],
-  },
-  {
-    //mongoose won't include virtuals when convert to JSON so have set up toJSON
-    toJSON: {
-      //virtuals help to compute properties on documents without storing it, that'll make the database lighter
-      virtuals: true,
-    },
   }
+  // {
+  //   //mongoose won't include virtuals when convert to JSON so have set up toJSON
+  //   toJSON: {
+  //     //virtual help to compute properties on documents without storing it, that'll make the database lighter
+  //     virtuals: true,
+  //   },
+  // }
 );
-//create a virtual property that will computed from duration
-WorkoutSchema.virtual("totalDuration").get(function () {
-  let totalDuration = 0;
-  //loop though each exercise for duration
-  this.exercise.forEach((e) => {
-    totalDuration += e.duration;
-  });
-  return totalDuration;
-});
+
+// WorkoutSchema.virtual("totalDuration").get(function () {
+//   let totalDuration = 0;
+//   //loop though each exercise for duration
+//   this.exercise.forEach((e) => {
+//     totalDuration += e.duration;
+//   });
+//   return totalDuration;
+// });
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
